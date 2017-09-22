@@ -1,7 +1,7 @@
 'use strict';
 const EventHubClient = require('azure-event-hubs').Client;
 
-const connectionString = 'GuusDevHub=>Shared access policies=>service=>primary key';
+const connectionString = 'GuusDevHub=>Shared access policies=>service=>Connection string - primary key';
 
 const printError = (err) => {
     console.log(err.message);

@@ -3,8 +3,7 @@ const clientFromConnectionString = require('azure-iot-device-mqtt').clientFromCo
 const Message = require('azure-iot-device').Message;
 
 // Device connection string
-//var connectionString = 'HostName=GuusDevHub.azure-devices.net;DeviceId=myFirstNodeDevice;SharedAccessKey=ELgmjN0DA9oUdXjl+Xk2vujoaBk7o9AVyU841kCgCIY=';
-const connectionString = 'HostName=GuusDevHub.azure-devices.net;DeviceId=pi3Guus;SharedAccessKey=kgefDUFFvtKej+81CAJ9rh02ads8fO+qLsrUqrB2iBk='
+const connectionString = 'GuusDevHub=>Device explorer=>guusPi3=>Connection string - primary key'
 const client = clientFromConnectionString(connectionString);
 
 const printResultFor = (op) => {
