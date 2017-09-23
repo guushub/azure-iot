@@ -9,7 +9,15 @@ const printError = (err) => {
 
 const printMessage = (message) => {
     console.log('Message received: ');
-    console.log(JSON.stringify(message.body));
+    const messageJson = JSON.stringify(message.body);
+    const messageObject = JSON.parse(messageJson);
+    let messageToPrint = messageObject;
+
+    if(messageObject.type === "Buffer" && messageObject.data) {
+        const messageBuffer = Buffer.from(messageObject.data);
+        messageToPrint = messageBuffer.toString();
+    }
+    console.log(messageToPrint);
     console.log('');
 };
 
